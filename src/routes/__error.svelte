@@ -12,7 +12,6 @@
 </script>
 
 <script lang="ts">
-  import { page } from '$app/stores';
   import { base } from '$app/paths';
 
   export let url: URL;
@@ -20,9 +19,13 @@
 </script>
 
 {#if status == 404}
-  <h1>404 Page not found | <a href="{base}/">Go back home</a></h1>
-  <p>{url.pathname}</p>
+  <h1>404 Page not found<br /></h1>
+  <img src="{base}/assets/catJAM.gif" alt="catJAM" />
+  <p>Route: {url.pathname}</p>
+  <a href="{base}/">Go back home</a>
 {:else}
   <h1>Oh no 😳 Something went wrong</h1>
+  <img src="{base}/assets/catJAM.gif" alt="catJAM" />
   <p>Statuscode: {status}</p>
+  <a href="{base}/">Go back home</a>
 {/if}

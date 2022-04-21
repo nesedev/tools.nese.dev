@@ -43,3 +43,11 @@ button,
   border: 0;
   border-radius: 0.25rem;
 }
+
+a {
+  color: rgba(127, 159, 255, 1);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
