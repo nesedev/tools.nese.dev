@@ -5,41 +5,45 @@
     <meta name="description" content="" />
     <link rel="icon" href="/modrinth-web-manager/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/modrinth-web-manager/_app/assets/pages/index.svelte-9ce26fa4.css">
-	<link rel="modulepreload" href="/modrinth-web-manager/_app/start-ed7d0812.js">
-	<link rel="modulepreload" href="/modrinth-web-manager/_app/chunks/index-dd45c2ae.js">
-	<link rel="modulepreload" href="/modrinth-web-manager/_app/layout.svelte-234d58c4.js">
-	<link rel="modulepreload" href="/modrinth-web-manager/_app/pages/index.svelte-5e5f066f.js">
+    <meta http-equiv="content-security-policy" content="" />
+    <link
+      rel="stylesheet"
+      href="/modrinth-web-manager/_app/assets/pages/index.svelte-9ce26fa4.css"
+    />
+    <link rel="modulepreload" href="/modrinth-web-manager/_app/start-ed7d0812.js" />
+    <link rel="modulepreload" href="/modrinth-web-manager/_app/chunks/index-dd45c2ae.js" />
+    <link rel="modulepreload" href="/modrinth-web-manager/_app/layout.svelte-234d58c4.js" />
+    <link rel="modulepreload" href="/modrinth-web-manager/_app/pages/index.svelte-5e5f066f.js" />
   </head>
   <body>
     <div>
+      <h1>Welcome to SvelteKit</h1>
+      <p class="svelte-1mp592p">
+        Visit <a href="https://kit.svelte.dev" class="svelte-1mp592p">kit.svelte.dev</a> to read the
+        documentation
+      </p>
 
-
-<h1>Welcome to SvelteKit</h1>
-<p class="svelte-1mp592p">Visit <a href="https://kit.svelte.dev" class="svelte-1mp592p">kit.svelte.dev</a> to read the documentation</p>
-
-
-		<script type="module" data-hydrate="1dka1pi">
-		import { start } from "/modrinth-web-manager/_app/start-ed7d0812.js";
-		start({
-			target: document.querySelector('[data-hydrate="1dka1pi"]').parentNode,
-			paths: {"base":"/modrinth-web-manager","assets":"/modrinth-web-manager"},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/modrinth-web-manager/_app/layout.svelte-234d58c4.js"),
-						import("/modrinth-web-manager/_app/pages/index.svelte-5e5f066f.js")
-				],
-				params: {},
-				routeId: ""
-			}
-		});
-	</script></div>
+      <script type="module" data-hydrate="1dka1pi">
+        import { start } from '/modrinth-web-manager/_app/start-ed7d0812.js';
+        start({
+          target: document.querySelector('[data-hydrate="1dka1pi"]').parentNode,
+          paths: { base: '/modrinth-web-manager', assets: '/modrinth-web-manager' },
+          session: {},
+          route: true,
+          spa: false,
+          trailing_slash: 'never',
+          hydrate: {
+            status: 200,
+            error: null,
+            nodes: [
+              import('/modrinth-web-manager/_app/layout.svelte-234d58c4.js'),
+              import('/modrinth-web-manager/_app/pages/index.svelte-5e5f066f.js'),
+            ],
+            params: {},
+            routeId: '',
+          },
+        });
+      </script>
+    </div>
   </body>
 </html>
