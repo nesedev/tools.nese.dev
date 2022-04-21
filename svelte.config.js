@@ -24,7 +24,8 @@ const config = {
     },
 
     paths: {
-      base: dev ? '' : '/tools.nese.dev',
+      //base: dev ? '' : '/tools.nese.dev',
+      base: '', // needed for https://toosl.nese.dev/
     },
   },
 };

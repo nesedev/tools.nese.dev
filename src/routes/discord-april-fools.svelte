@@ -24,7 +24,6 @@
         if (document.fonts.check('700 125px Roboto Mono')) {
           clearInterval(fontLoaderInterval);
         }
-        console.log('fontloader');
         addNotification();
       }, 100);
       setTimeout(() => clearInterval(fontLoaderInterval), 1000);
