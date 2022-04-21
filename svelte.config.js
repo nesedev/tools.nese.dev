@@ -24,7 +24,7 @@ const config = {
     },
 
     paths: {
-      base: dev ? '' : '/modrinth-web-manager',
+      base: dev ? '' : '/tools.nese.dev',
     },
   },
 };
