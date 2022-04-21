@@ -30,3 +30,16 @@ body {
   display: grid;
   grid-template-columns: 15rem auto;
 }
+
+button,
+.button {
+  color: inherit;
+  background: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border: 0;
+  border-radius: 0.25rem;
+}
