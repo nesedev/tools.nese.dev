@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-70dde5aa.js",
+    "file": "start-8da6a5bf.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -40,7 +40,7 @@
     ]
   },
   "src/routes/discord-april-fools.svelte": {
-    "file": "pages/discord-april-fools.svelte-ad1df781.js",
+    "file": "pages/discord-april-fools.svelte-db8eb0b5.js",
     "src": "src/routes/discord-april-fools.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -48,7 +48,7 @@
       "_index-da0e81ae.js"
     ],
     "css": [
-      "assets/pages/discord-april-fools.svelte-242cc995.css"
+      "assets/pages/discord-april-fools.svelte-0789908d.css"
     ]
   },
   "src/routes/index.svelte": {
