@@ -1,44 +1,45 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-0d7d60f3.js",
+    "file": "start-863fb2fe.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-dd45c2ae.js",
+      "_index-1129cd57.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
-      ".svelte-kit/runtime/components/layout.svelte",
+      "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.svelte",
       "src/routes/test.svelte"
     ]
   },
-  ".svelte-kit/runtime/components/layout.svelte": {
-    "file": "layout.svelte-234d58c4.js",
-    "src": ".svelte-kit/runtime/components/layout.svelte",
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-a100ed41.js",
+    "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-dd45c2ae.js"
+      "_index-1129cd57.js",
+      "_paths-396f020f.js"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-e112289f.js",
+    "file": "error.svelte-25566ae2.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-dd45c2ae.js"
+      "_index-1129cd57.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-33bf4087.js",
+    "file": "pages/index.svelte-631b443d.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-dd45c2ae.js",
+      "_index-1129cd57.js",
       "_paths-396f020f.js"
     ],
     "css": [
@@ -46,17 +47,17 @@
     ]
   },
   "src/routes/test.svelte": {
-    "file": "pages/test.svelte-56ff535a.js",
+    "file": "pages/test.svelte-c4341789.js",
     "src": "src/routes/test.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-dd45c2ae.js",
+      "_index-1129cd57.js",
       "_paths-396f020f.js"
     ]
   },
-  "_index-dd45c2ae.js": {
-    "file": "chunks/index-dd45c2ae.js"
+  "_index-1129cd57.js": {
+    "file": "chunks/index-1129cd57.js"
   },
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
