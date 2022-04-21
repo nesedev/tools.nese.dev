@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build && prettier --write --plugin-search-dir=. build/index.html",
+    "build": "svelte-kit build && prettier --write --plugin-search-dir=. build/*.html",
     "deploy": "gh-pages -d build -t true",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",

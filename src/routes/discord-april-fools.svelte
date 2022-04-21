@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { waitForFontLoad } from '$lib/helper/waitForFontLoad';
   import { onMount } from 'svelte';
 
   let logoInput: HTMLInputElement;
@@ -9,9 +8,10 @@
   let currentImage: HTMLImageElement;
   let resultImg: HTMLImageElement;
 
-  onMount(async () => {
+  onMount(() => {
     currentImage = new Image();
 
+    if (!canvas) return;
     ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -20,11 +20,19 @@
 
     document.fonts.load('700 125px Roboto Mono').then(() => {
       addNotification();
+      const fontLoaderInterval = setInterval(() => {
+        if (document.fonts.check('700 125px Roboto Mono')) {
+          clearInterval(fontLoaderInterval);
+        }
+        console.log('fontloader');
+        addNotification();
+      }, 100);
+      setTimeout(() => clearInterval(fontLoaderInterval), 1000);
     });
   });
 
   const addNotification = () => {
-    if (!ctx) return;
+    if (!ctx || !canvas) return;
 
     drawImage();
 
@@ -50,7 +58,8 @@
   let currentFileName: string;
 
   const drawImage = () => {
-    if (!ctx) return;
+    if (!ctx || !canvas) return;
+
     if (currentImage.src != '') {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
@@ -126,9 +135,18 @@
   </div>
 
   <button class="input button download-button" on:click={downloadButtonHandler}>Download</button>
+
+  <span class="font-loader">&nbsp;</span>
 </div>
 
 <style lang="scss" scoped>
+  .font-loader {
+    font-family: 'Roboto Mono';
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
