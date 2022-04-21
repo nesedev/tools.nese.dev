@@ -12,7 +12,7 @@
     <NavItem name="Home" icon="home" route="/" />
   </NavGroup>
   <NavGroup title="Tools">
-    <NavItem name="Test" icon="home" route="/test" />
+    <NavItem name="Discord April Fools" icon="theater_comedy" route="/discord-april-fools" />
   </NavGroup>
 </nav>
 

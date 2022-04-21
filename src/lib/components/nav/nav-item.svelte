@@ -7,7 +7,7 @@
   export let route: string;
 </script>
 
-<a href="{base}{route}" class="nav-item" class:active={$page.url.pathname === route}>
+<a href="{base}{route}" class="nav-item" class:active={$page.url.pathname === base + route}>
   <span class="nav-icon material-icons-outlined">{icon}</span>{name}
 </a>
 

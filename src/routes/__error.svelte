@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   import type { Load } from '@sveltejs/kit';
 
-  export const load: Load = ({ error, status, url, stuff }) => {
+  export const load: Load = ({ status, url }) => {
     return {
       props: {
         url: new URL(url),
