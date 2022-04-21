@@ -4,7 +4,7 @@
 <style lang="scss">
   p {
     a {
-      color: #f00;
+      color: #3f3fff;
     }
   }
 </style>

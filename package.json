@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "deploy": "gh-pages -d build -t true",
+    "deploy": "prettier --write --plugin-search-dir=. build && gh-pages -d build -t true",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
