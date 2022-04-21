@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+
+:root {
+  --gray-1: #070707;
+  --gray-2: #0f0f0f;
+  --gray-3: #171717;
+  --gray-4: #1f1f1f;
+  --gray-5: #272727;
+  --gray-6: #2f2f2f;
+  --gray-7: #373737;
+
+  --primary-bg: var(--gray-2);
+  --secondary-bg: var(--gray-3);
+  --primary-fg: #bfcfdf;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  overflow: hidden;
+  background: var(--primary-bg);
+  color: var(--primary-fg);
+  display: grid;
+  grid-template-columns: 15rem auto;
+}

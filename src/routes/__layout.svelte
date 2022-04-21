@@ -1,10 +1,19 @@
 <script>
-  import { base } from '$app/paths';
+  import '../app.scss';
+
+  import Nav from '$lib/components/nav/nav.svelte';
 </script>
 
-<nav>
-  <a href="{base}/">Home</a>
-  <a href="{base}/test">Test</a>
-</nav>
+<Nav />
 
-<slot />
+<main>
+  <slot />
+</main>
+
+<style lang="scss" scoped>
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
