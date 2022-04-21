@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8da6a5bf.js",
+    "file": "start-1c606e62.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -40,7 +40,7 @@
     ]
   },
   "src/routes/discord-april-fools.svelte": {
-    "file": "pages/discord-april-fools.svelte-db8eb0b5.js",
+    "file": "pages/discord-april-fools.svelte-b71bf8e2.js",
     "src": "src/routes/discord-april-fools.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
