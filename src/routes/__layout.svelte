@@ -2,8 +2,9 @@
   import { base } from '$app/paths';
 </script>
 
-<main>
-  <h1>Test</h1>
+<nav>
   <a href="{base}/">Home</a>
   <a href="{base}/test">Test</a>
-</main>
+</nav>
+
+<slot />
