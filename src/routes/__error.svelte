@@ -18,6 +18,10 @@
   export let status: number;
 </script>
 
+<svelte:head>
+  <title>NeseDev | {status}</title>
+</svelte:head>
+
 {#if status == 404}
   <h1>404 Page not found<br /></h1>
   <img src="{base}/assets/catJAM.gif" alt="catJAM" />

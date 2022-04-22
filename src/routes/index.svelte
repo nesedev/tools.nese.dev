@@ -10,4 +10,8 @@
   }
 </script>
 
+<svelte:head>
+  <title>NeseDev | Home</title>
+</svelte:head>
+
 <h1>Welcome to Nese Tools</h1>

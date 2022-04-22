@@ -6,8 +6,7 @@
   <div class="cookie-consent-wrapper" class:hidden={!$gdprConsentVisible}>
     <div class="cookie-consent">
       <span class="cookie-text"
-        >By using this site, you accept the use of functional Cookies for Cloudflare and Google
-        Fonts.</span
+        >By using this site, you accept the use of necessary Cookies (if any).</span
       >
       <span>
         <div class="button-wrapper">
