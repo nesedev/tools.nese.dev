@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-772f181a.js",
+    "file": "start-8929ba7e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -13,8 +13,7 @@
       "src/routes/__layout.svelte",
       "src/routes/__error.svelte",
       "src/routes/discord-april-fools.svelte",
-      "src/routes/index.svelte",
-      "src/routes/test.svelte"
+      "src/routes/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -33,29 +32,31 @@
     ]
   },
   "src/routes/__error.svelte": {
-    "file": "pages/__error.svelte-e284b5f9.js",
+    "file": "pages/__error.svelte-d16746ca.js",
     "src": "src/routes/__error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-ff8f5515.js",
-      "_paths-396f020f.js"
+      "_paths-396f020f.js",
+      "_title-c5dce62c.js"
     ]
   },
   "src/routes/discord-april-fools.svelte": {
-    "file": "pages/discord-april-fools.svelte-c6635787.js",
+    "file": "pages/discord-april-fools.svelte-a067fe30.js",
     "src": "src/routes/discord-april-fools.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-ff8f5515.js"
+      "_index-ff8f5515.js",
+      "_title-c5dce62c.js"
     ],
     "css": [
       "assets/pages/discord-april-fools.svelte-0789908d.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-103b4034.js",
+    "file": "pages/index.svelte-8a1c7138.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -63,17 +64,8 @@
       "_index-ff8f5515.js",
       "_singletons-d1fb5791.js",
       "_paths-396f020f.js",
-      "_stores-3bae1a86.js"
-    ]
-  },
-  "src/routes/test.svelte": {
-    "file": "pages/test.svelte-4e8cde22.js",
-    "src": "src/routes/test.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-ff8f5515.js",
-      "_paths-396f020f.js"
+      "_stores-3bae1a86.js",
+      "_title-c5dce62c.js"
     ]
   },
   "_index-ff8f5515.js": {
@@ -93,6 +85,12 @@
   },
   "_stores-3bae1a86.js": {
     "file": "chunks/stores-3bae1a86.js",
+    "imports": [
+      "_index-ff8f5515.js"
+    ]
+  },
+  "_title-c5dce62c.js": {
+    "file": "chunks/title-c5dce62c.js",
     "imports": [
       "_index-ff8f5515.js"
     ]
