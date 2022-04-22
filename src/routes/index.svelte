@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import { base } from '$app/paths';
   import { page } from '$app/stores';
+  import Title from '$lib/components/title.svelte';
 
   const url = $page.url;
 
@@ -10,8 +11,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>NeseDev | Home</title>
-</svelte:head>
+<Title text="Home" />
 
 <h1>Welcome to Nese Tools</h1>

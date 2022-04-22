@@ -13,14 +13,13 @@
 
 <script lang="ts">
   import { base } from '$app/paths';
+  import Title from '$lib/components/title.svelte';
 
   export let url: URL;
   export let status: number;
 </script>
 
-<svelte:head>
-  <title>NeseDev | {status}</title>
-</svelte:head>
+<Title text={status.toString()} />
 
 {#if status == 404}
   <h1>404 Page not found<br /></h1>

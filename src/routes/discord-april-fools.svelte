@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Title from '$lib/components/title.svelte';
+
   import { onMount } from 'svelte';
 
   let logoInput: HTMLInputElement;
@@ -98,8 +100,9 @@
   };
 </script>
 
+<Title text="Discord April Fools" />
+
 <svelte:head>
-  <title>NeseDev | Discord April Fools</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
