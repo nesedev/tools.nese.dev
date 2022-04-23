@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-7f1abcfb.js",
+    "file": "start-d6a1baee.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -33,7 +33,7 @@
     ]
   },
   "src/routes/__error.svelte": {
-    "file": "pages/__error.svelte-af282b71.js",
+    "file": "pages/__error.svelte-3e12ce9d.js",
     "src": "src/routes/__error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -41,6 +41,9 @@
       "_index-784640fd.js",
       "_paths-396f020f.js",
       "_title-fe6b8066.js"
+    ],
+    "css": [
+      "assets/pages/__error.svelte-fc78a304.css"
     ]
   },
   "src/routes/discord-april-fools.svelte": {
