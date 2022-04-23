@@ -17,7 +17,7 @@
 
 <style lang="scss">
   .app {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden auto;
   }
@@ -25,7 +25,7 @@
   .main-container {
     display: flex;
     padding-left: 15rem;
-    height: 100vh;
+    height: 100%;
   }
 
   main {
