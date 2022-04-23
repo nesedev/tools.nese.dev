@@ -3,8 +3,54 @@
   import NavItem from './nav-item.svelte';
   import NavGroup from './nav-group.svelte';
   import { betaMode } from '$lib/stores';
+  import { onDestroy, onMount } from 'svelte';
 
   let show: Boolean = true;
+
+  const touchStart = { x: 0, y: 0 };
+  const touchEnd = { x: 0, y: 0 };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    const touch = e.changedTouches[0];
+    touchStart.x = touch.screenX;
+    touchStart.y = touch.screenY;
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    const touch = e.changedTouches[0];
+    touchEnd.x = touch.screenX;
+    touchEnd.y = touch.screenY;
+    handleGesture();
+  };
+
+  function handleGesture() {
+    const xDistance = touchEnd.x - touchStart.x;
+    const yDistance = touchEnd.y - touchStart.y;
+
+    if (Math.abs(xDistance) > Math.abs(yDistance)) {
+      if (xDistance > 0) {
+        // swiped right
+        show = true;
+      } else {
+        // swiped left
+        show = false;
+      }
+    }
+  }
+
+  let body: HTMLElement;
+
+  onMount(() => {
+    body = document.body;
+
+    body.addEventListener('touchstart', handleTouchStart);
+    body.addEventListener('touchend', handleTouchEnd);
+  });
+
+  onDestroy(() => {
+    body?.removeEventListener('touchstart', handleTouchStart);
+    body?.removeEventListener('touchend', handleTouchEnd);
+  });
 </script>
 
 <nav class:hidden={!show}>
