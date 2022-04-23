@@ -17,8 +17,7 @@
             href="https://ec.europa.eu/info/cookies_en"
             target="_blank"
             class="button secondary"
-            on:click={() => ($gdprConsentVisible = !$gdprConsentVisible)}
-            >Learn more about cookies</a
+            on:click={() => ($gdprConsentVisible = !$gdprConsentVisible)}>Learn more</a
           >
         </div>
       </span>
@@ -34,12 +33,10 @@
     right: 0;
     transition: 0.5s;
     overflow: hidden;
-    // width: 25em;
-    width: 25em;
+    max-width: 100%;
 
     &.hidden {
-      opacity: 0;
-      width: 0em;
+      transform: translateX(100%);
     }
   }
 
@@ -51,7 +48,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(25em - 2em);
+    width: calc(23em);
+    max-width: calc(100% - 2em);
 
     .cookie-text {
       flex-grow: 1;

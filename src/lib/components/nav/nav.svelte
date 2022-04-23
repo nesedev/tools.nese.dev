@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import NavItem from './nav-item.svelte';
   import NavGroup from './nav-group.svelte';
-  import { betaMode, menuShown } from '$lib/stores';
+  import { betaMode, isMobile, menuShown } from '$lib/stores';
   import { onDestroy, onMount } from 'svelte';
 
   const touchStart = { x: 0, y: 0 };

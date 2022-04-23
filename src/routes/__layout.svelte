@@ -2,25 +2,25 @@
   import '../app.scss';
   import Nav from '$lib/components/nav/nav.svelte';
   import Gdpr from '$lib/components/gdpr.svelte';
-  import { menuShown } from '$lib/stores';
+  import { isMobile, menuShown } from '$lib/stores';
   import { onDestroy, onMount } from 'svelte';
 
-  let isMobile: boolean;
   let mobileMq: MediaQueryList;
   const mobileMqHandler = (e: MediaQueryListEvent) => {
-    isMobile = e.matches;
+    $isMobile = e.matches;
   };
 
   let mainContainer: HTMLElement;
   const mainClickHandler = () => {
-    if (isMobile) $menuShown = false;
+    if ($isMobile) $menuShown = false;
   };
 
   onMount(() => {
     mobileMq = window.matchMedia('screen and (max-width: 50rem)');
     mobileMq.addEventListener('change', mobileMqHandler);
+    $isMobile = mobileMq.matches;
+    $menuShown = !$isMobile;
 
-    isMobile = mobileMq.matches;
     mainContainer.addEventListener('click', mainClickHandler);
   });
 

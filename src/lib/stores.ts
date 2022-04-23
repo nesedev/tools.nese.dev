@@ -37,4 +37,5 @@ export const gdprConsent = localStorageWriteable('gdprConsent', GdprConsent.not_
 
 export const betaMode = localStorageWriteable('betaMode', false);
 
-export const menuShown = writable(true);
+export const isMobile = writable(false);
+export const menuShown = writable(false);
