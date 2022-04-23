@@ -2,10 +2,8 @@
   import { base } from '$app/paths';
   import NavItem from './nav-item.svelte';
   import NavGroup from './nav-group.svelte';
-  import { betaMode } from '$lib/stores';
+  import { betaMode, menuShown } from '$lib/stores';
   import { onDestroy, onMount } from 'svelte';
-
-  let show: Boolean = true;
 
   const touchStart = { x: 0, y: 0 };
   const touchEnd = { x: 0, y: 0 };
@@ -30,10 +28,10 @@
     if (Math.abs(xDistance) > Math.abs(yDistance)) {
       if (xDistance > 0) {
         // swiped right
-        show = true;
+        $menuShown = true;
       } else {
         // swiped left
-        show = false;
+        $menuShown = false;
       }
     }
   }
@@ -53,7 +51,7 @@
   });
 </script>
 
-<nav class:hidden={!show}>
+<nav class:hidden={!$menuShown}>
   <a href="{base}/" class="nav-header">
     <img src="{base}/assets/logo.png" alt="logo" />
   </a>
@@ -67,7 +65,7 @@
     <NavItem name="Discord April Fools" icon="theater_comedy" route="/discord-april-fools" />
   </NavGroup>
 </nav>
-<button class="nav-toggle" on:click={() => (show = !show)}>
+<button class="nav-toggle" on:click={() => ($menuShown = !$menuShown)}>
   <span class="icon material-icons-outlined">menu</span>
 </button>
 
@@ -81,7 +79,7 @@
     height: 100%;
     flex-shrink: 0;
     position: relative;
-    transition: 0.25s;
+    transition: 0.5s;
     position: fixed;
     top: 0;
     left: 0;
@@ -115,7 +113,6 @@
     margin: 1rem;
     padding: 0.5rem;
     cursor: pointer;
-    transition: 0.1s;
     background: var(--gray-4);
 
     img {

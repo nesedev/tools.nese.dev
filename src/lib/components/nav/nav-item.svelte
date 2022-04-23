@@ -21,7 +21,6 @@
     margin: 0.25rem 0;
     padding: 0.5rem;
     cursor: pointer;
-    transition: 0.1s;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
