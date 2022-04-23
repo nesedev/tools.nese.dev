@@ -1,27 +1,65 @@
-<script>
+<script lang="ts">
   import { base } from '$app/paths';
   import NavItem from './nav-item.svelte';
   import NavGroup from './nav-group.svelte';
+  import { betaMode } from '$lib/stores';
+
+  let show: Boolean = true;
 </script>
 
-<nav>
+<nav class:hidden={!show}>
   <a href="{base}/" class="nav-header">
     <img src="{base}/assets/logo.png" alt="logo" />
   </a>
   <NavGroup title="General">
     <NavItem name="Home" icon="home" route="/" />
   </NavGroup>
-  <NavGroup title="Tools">
+  <NavGroup title="Minecraft" hidden={!$betaMode}>
+    <NavItem name="Modrinth Manager" icon="view_in_ar_new" route="/modrinth-manager" />
+  </NavGroup>
+  <NavGroup title="Miscellaneous">
     <NavItem name="Discord April Fools" icon="theater_comedy" route="/discord-april-fools" />
   </NavGroup>
 </nav>
+<button class="nav-toggle" on:click={() => (show = !show)}>
+  <span class="icon material-icons-outlined">menu</span>
+</button>
 
-<style lang="scss" scoped>
+<style lang="scss">
   nav {
     background: var(--secondary-bg);
     overflow-x: hidden;
     scrollbar-width: thin;
     user-select: none;
+    width: 15rem;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    transition: 0.25s;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.hidden {
+      // width: 5rem;
+      opacity: 0;
+      transform: translateX(-15rem);
+    }
+  }
+
+  .nav-toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // right: 0;
+    margin: 1em;
+    background: var(--gray-4);
+    padding: 0.25rem;
+
+    .icon {
+      vertical-align: sub;
+      width: 1em;
+    }
   }
 
   .nav-header {

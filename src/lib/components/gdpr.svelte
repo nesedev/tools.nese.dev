@@ -27,7 +27,7 @@
   <div class="cookie-toggle" on:click={() => ($gdprConsentVisible = !$gdprConsentVisible)}>🍪</div>
 {/if}
 
-<style lang="scss" scoped>
+<style lang="scss">
   .cookie-consent-wrapper {
     position: fixed;
     bottom: 0;

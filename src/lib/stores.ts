@@ -34,3 +34,5 @@ export const gdprConsentVisible = localStorageWriteable('gdprConsentVisible', tr
 // }, 500);
 
 export const gdprConsent = localStorageWriteable('gdprConsent', GdprConsent.not_opted);
+
+export const betaMode = localStorageWriteable('betaMode', false);

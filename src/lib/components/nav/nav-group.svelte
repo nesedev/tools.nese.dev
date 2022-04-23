@@ -1,13 +1,16 @@
 <script lang="ts">
   export let title: string;
+  export let hidden: boolean = false;
 </script>
 
-<div class="nav-group">
-  <span class="nav-title">{title}</span>
-  <slot />
-</div>
+{#if !hidden}
+  <div class="nav-group">
+    <span class="nav-title">{title}</span>
+    <slot />
+  </div>
+{/if}
 
-<style lang="scss" scoped>
+<style lang="scss">
   .nav-group {
     margin: 0 1rem 1rem 1rem;
     display: flex;

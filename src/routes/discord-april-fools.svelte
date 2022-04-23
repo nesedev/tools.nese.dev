@@ -133,7 +133,7 @@
   />
 
   <div class="canvas-wrapper">
-    <img class="logo-canvas" bind:this={resultImg} src="" alt="" />
+    <img class="logo-image" bind:this={resultImg} src="" alt="" />
     <canvas class="logo-canvas" bind:this={canvas} width={512} height={512} hidden />
   </div>
 
@@ -142,7 +142,17 @@
   <span class="font-loader">&nbsp;</span>
 </div>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  .wrapper {
+    margin: auto;
+    padding: 1rem;
+    // font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 100%;
+  }
+
   .font-loader {
     font-family: 'Roboto Mono';
     position: absolute;
@@ -150,13 +160,7 @@
     user-select: none;
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-width: 50%;
-  }
-
-  .logo-canvas {
+  .logo-image {
     border-radius: 50%;
     transition: 0.25s ease-in-out;
     width: 50%;
@@ -177,6 +181,9 @@
     padding: 0.5em;
     border-radius: 0.5em;
     margin: 0.5rem 1rem;
+
+    width: 100%;
+    max-width: 25rem;
   }
 
   .file-button {

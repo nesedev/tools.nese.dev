@@ -5,13 +5,16 @@
   export let icon: string;
   export let name: string;
   export let route: string;
+  export let hidden: boolean = false;
 </script>
 
-<a href="{base}{route}" class="nav-item" class:active={$page.url.pathname === base + route}>
-  <span class="nav-icon material-icons-outlined">{icon}</span>{name}
-</a>
+{#if !hidden}
+  <a href="{base}{route}" class="nav-item" class:active={$page.url.pathname === base + route}>
+    <span class="nav-icon material-icons-outlined">{icon}</span>{name}
+  </a>
+{/if}
 
-<style lang="scss" scoped>
+<style lang="scss">
   .nav-item {
     display: block;
     border-radius: 0.5rem;
@@ -25,23 +28,6 @@
     text-decoration: none;
     color: inherit;
 
-    .material-icons-outlined {
-      font-family: 'Material Icons Outlined';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      font-feature-settings: 'liga';
-      -moz-font-feature-settings: 'liga';
-      -moz-osx-font-smoothing: grayscale;
-    }
-
     &:hover {
       background: var(--gray-4);
     }
@@ -54,6 +40,7 @@
       color: rgb(0, 127, 255);
       margin-right: 0.5rem;
       vertical-align: sub;
+      width: 1em;
     }
   }
 </style>
